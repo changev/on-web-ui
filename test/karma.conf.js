@@ -34,7 +34,7 @@ module.exports = (config) => {
 
     browsers: ['Chrome', 'Firefox'],
 
-    singleRun: false,
+    singleRun: true,
 
     files: [
       'test/src/unit_tests.js'
