@@ -5,3 +5,4 @@ tasks /var/renasar/on-web-ui
 package.json /var/renasar/on-web-ui
 webpack.config.babel.js /var/renasar/on-web-ui
 commitstring.txt /var/renasar/on-web-ui
+.babelrc /var/renasar/on-web-ui
