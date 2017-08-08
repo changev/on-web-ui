@@ -10,7 +10,7 @@ if (env.LIB_NAME == null || env.LIB_NAME == ""){
 
 library env.LIB_NAME
 
-node{
+node {
     checkout scm
     load('pipeline/SprintRelease/SprintRelease')
 }

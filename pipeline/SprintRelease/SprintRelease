@@ -1,16 +1,4 @@
-@Library("rackhd-devel-lib")
 
-node {
-    env.LIB_VERSION=env."library.rackhd-devel-lib.version"
-    if (env.LIB_URL == null || env.LIB_URL == ""){
-        env.LIB_URL="https://github.com/rackhd/on-build-config"
-    }
-    
-    println env.LIB_VERSION
-    println env.LIB_URL
-}
-
-node{
     timestamps{
         withEnv([
             "tag_name=${env.tag_name}",
@@ -77,4 +65,4 @@ node{
             }
         }
     }
-}
+
