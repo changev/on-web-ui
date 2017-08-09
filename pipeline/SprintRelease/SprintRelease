@@ -19,9 +19,6 @@
             deleteDir()
             checkout scm
             def shareMethod = new rackhd.utils.ShareMethod()
-            if(JUMP_VERSION == "true"){
-                new rackhd.SprintRelease.bump_version().execute()
-            }
 
             try{
                 // If MANIFEST_FILE_URL is not defined, the value of "${env.MANIFEST_FILE_URL}" is "null"
@@ -33,6 +30,11 @@
                         new rackhd.create_manifest.create_manifest().execute()
                     }
                 }
+
+                if(JUMP_VERSION == "true"){
+                    new rackhd.SprintRelease.bump_version().execute()
+                }
+
                 def manifest_name=env.MANIFEST_FILE_URL.tokenize('/')[-1];
                 currentBuild.description = "<a href=${env.MANIFEST_FILE_URL}>${manifest_name}</a>";
  
